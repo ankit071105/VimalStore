@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>JavaScript Shopping Cart Project Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  
+      <style>
+         nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    min-height: 8vh;
+    background: linear-gradient(to right, #2a2e2e 33%, #665e5e 80% , rgb(178, 177, 182) 100%);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    color: aliceblue;
+}
+
+.nav-links li{
+    list-style: none;
+}
+.shop1{
+    display: flex;
+    justify-content: space-between;
+/* background-color: #0a0b0b; */
+background-size: cover;
+overflow:-moz-hidden-unscrollable;
+position: relative;
+}
+.box{
+border: 1px solid rgb(38, 36, 36);
+ height: 300px;
+ width: 120px;
+ color: rgb(238, 234, 234);
+padding: 20px 0px 15px;
+ background-color: #235590;
+
+}
+.box11{
+border: 1px solid rgb(38, 36, 36);
+ height: 370px;
+ width: 200px;
+ color: rgb(238, 234, 234);
+padding: 20px 0px 15px;
+ background-color: #235590;
+ border-radius: 18%;
+}
+.box12{
+border: 1px solid rgb(38, 36, 36);
+ height: 300px;
+ width: 120px;
+ color: rgb(238, 234, 234);
+padding: 20px 0px 15px;
+ background-color: #235590;
+
+}
+.boxcontent1{
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+.boxcontent{
+    margin-left: 10px;
+    margin-right:10px;
+}
+.on{
+    color: rgb(232, 225, 225);
+}
+.on:hover{
+    color: rgb(0, 0, 0);
+}
+    .boximg9{
+    width: 80px;
+    height: 90px;
+    float: left;
+    background-image: url("https://www.jiomart.com/images/product/original/rvqsibnykw/lila-dry-fruits-premium-dried-afghani-anjeer-500gms-x-2-1-kgs-mason-jar-pack-dried-figs-rich-source-of-fibre-calcium-iron-low-in-calories-and-fat-free-non-gmo-dried-figs-product-images-orvqsibnykw-p595763199-0-202211281149.jpg?im=Resize=(420,420)");
+    background-size: cover;
+
+}
+.boximg10{
+    width: 70px;
+    height: 70px;
+    background-image: url("https://www.jiomart.com/images/product/original/rvq6cto5tp/coreganic-100-natural-international-premium-whole-cashews-1-kg-product-images-orvq6cto5tp-p590868955-0-202305171318.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg11{
+    width: 70px;
+    height: 70px;
+background-image:url("https://www.jiomart.com/images/product/original/rv2apjszvl/farmnuts-seedless-green-raisins-kismis-dry-grapes-kishmish-significantly-lower-blood-pressure-100-gm-product-images-orv2apjszvl-p600499307-0-202304131747.jpg?im=Resize=(420,420)") ;
+    background-size: cover;
+}
+.boximg12{
+    width: 70px;
+    height: 70px;
+    background-image: url("https://www.jiomart.com/images/product/original/rvgizxkwj0/naturoz-daily-california-almonds-1-kg-product-images-orvgizxkwj0-p590799751-0-202212121932.png?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg13{
+    width: 100px;
+    height: 90px;
+    background-image: url("https://www.jiomart.com/images/product/original/rvnh8zgdhr/open-secret-premium-kimia-dates-khajur-pack-of-2-800g-product-images-orvnh8zgdhr-p601432840-0-202305121738.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg14{
+    width: 100px;
+    height: 80px;
+    background-image: url("https://www.jiomart.com/images/product/original/rvo4h5dzz9/nutraj-signature-jumbo-california-walnuts-in-shell-1-kg-product-images-orvo4h5dzz9-p590811334-0-202303301535.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg15{
+    width: 100px;
+    height: 90px;
+    background-image: url("https://www.jiomart.com/images/product/original/rvn5drlp1g/lila-dry-fruits-premium-raw-mota-pista-pistachios-without-shell-250gms-jar-pack-pista-dry-fruit-tasty-healthy-high-in-protein-dietary-fiber-gluten-free-low-calorie-nuts-product-images-orvn5drlp1g-p596068020-0-202212051207.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg16{
+    width: 70px;
+    height: 70px;
+    background-image: url("https://m.media-amazon.com/images/I/61whSHm0I-L._AC_UF1000,1000_QL80_.jpg");
+    background-size: cover;
+}
+.boximg17{
+    width: 70px;
+    height: 70px;
+    background-image: url("https://m.media-amazon.com/images/I/6116mbBKuZL.jpg");
+    background-size: cover;
+}
+.boximg18{
+    width: 70px;
+    height: 70px;
+    background-image: url("");
+    background-size: cover;
+}
+.boximg19{
+    width: 180px;
+    height: 160px;
+    background-image: url("https://www.jiomart.com/images/product/original/rvqbmliz5c/greenfinity-mix-dry-fruits-and-nuts-2kg-almonds-pistachios-walnuts-cashew-pumpkin-cranberry-black-raisin-healthy-gift-hamper-for-every-occasion-fresh-and-healthy-dry-fruits-seeds-nuts-product-images-orvqbmliz5c-p596503470-0-202212301704.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg20{
+    width: 180px;
+    height: 160px;
+    background-image: url("https://www.jiomart.com/images/product/original/rvwzwpx3n4/horaira-nutz-dry-fruits-combo-pack-1kg-cashews-250g-figs-250g-raisins-250g-almond-250g-product-images-orvwzwpx3n4-p592458748-0-202207090431.jpg?im=Resize=(420,420)");
+    background-size: cover;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    min-height: 8vh;
+    background: linear-gradient(to right, #2a2e2e 33%, #665e5e 80% , rgb(178, 177, 182) 100%);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    color: aliceblue;
+}
+
+.nav-links li{
+    list-style: none;
+}
+      
+      
+      </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="heading">
+    
+          <h4>Vimal Store</h4>
+      </div>
+      <ul class="nav-links">
+
+          <li><a class="active" href="/index.html"><i class="fa-solid fa-house"></i></a></li>
+          <li><a href="/about.html"><i class="fa-solid fa-user"></i></a></li>
+          <li><a href="https://www.google.com/maps/place/Vimal+Store/@22.7474276,86.2569916,17z/data=!4m12!1m5!3m4!2zMjLCsDQ0JzUzLjYiTiA4NsKwMTUnMzYuOSJF!8m2!3d22.7482222!4d86.26025!3m5!1s0x39f607f448f0eeab:0x7a5518de30000000!8m2!3d22.7474227!4d86.2595612!16s%2Fg%2F11ny3hyg_h?entry=ttu"><i class="fa-solid fa-map-location-dot"></i></a></li>
+          <li><a href="/contact.html"><i class="fa-solid fa-address-book"></i></a></li>
+        <li><a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+  </nav>
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+    </div>
+</nav>
+
+
+<!-- Main -->
+<div class="container">
+    <div class="row">
+   
+    </div>
+</div>
+
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: ₹<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href="/cart.html">Go To Cart</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+
+ <h1 style="color: rgb(8, 6, 6); margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif;">Dry Fruits & Nuts Upto 30%</h1>
+ <div class="shop1">
+     
+   <div class="box1 box"> 
+   <div class="boxcontent">
+     <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Anjeer</h2>
+     <div class="boximg9"></div>
+ 
+     <p style="font-size: 18px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;"><span style="font-weight: 900; font-size: 20px; color: aliceblue; font-family: 'Times New Roman', Times, serif;">1kg  </span>₹ 540 <a href="#" class="on"></a></p>
+     <br>
+     <a href="#" data-name="Anjeer" data-price="540.00" class="add-to-cart btn btn-primary">Add to cart</a>
+   </div>
+   </div>
+   
+ 
+     <div class="box2 box">
+   <div class="boxcontent">
+     <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Coreganic Premium Whole Cashews</h2>
+     <div class="boximg10"></div>
+  
+   <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;"> 1Kg  ₹ 780 <a href="#" class="on" ></a></p>
+   <a href="#" data-name="Coreganic Premium Whole Cashews" data-price="780.00" class="add-to-cart btn btn-primary">Add to cart</a>
+   </div>
+   </div>
+     
+    
+     <div class="box3 box">
+       <div class="boxcontent">
+       <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">FarmNuts-Seedless Green Raisins </h2>
+       <div class="boximg11"></div>
+   
+     <p style="font-size: 16px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;"> 1Kg     ₹ 400 <a href="" class="on"></a></p>
+     <a href="#" data-name="FarmNuts-Seedless Raisins (Kismis) 1kg" data-price="400.00" class="add-to-cart btn btn-primary">Add to cart</a>
+     </div></div>
+
+   </div>
+ 
+   <h1 style="color: rgb(14, 16, 16); margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif; text-align: center;"> Combo Packs </h1>
+   <div class="shop1">
+       
+     <div class="box1 box11"> 
+     <div class="boxcontent1">
+       <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Horaira Nutz Dry Fruits Combo Pack</h2>
+       <div class="boximg20"></div>
+       <p style="font-size: 15px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 710.00 <a href="#" class="on"></a></p>
+       <a href="#" data-name="Horaira Nutz Dry Fruits Combo Pack" data-price="710.00" class="add-to-cart btn btn-primary">Add to cart</a>
+     </div>
+     </div>
+     
+ 
+       <div class="box2 box11">
+     <div class="boxcontent">
+       <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">GreenFinity Mix Dry Fruits and Nuts, 2kg </h2>
+       <div class="boximg19"></div>
+    
+     <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 1,199.00   <a href="#" class="on"></a></p>
+     <a href="#" data-name="GreenFinity Mix Dry Fruits and Nuts, 2kg" data-price="1199.00" class="add-to-cart btn btn-primary">Add to cart</a>
+     </div>
+     </div>
+       
+      
+       
+     
+     </div>  
+ 
+     <h1 style="color: rgb(15, 13, 13); margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif; text-align: center;">Dry Fruits</h1>
+     <div class="shop1">
+         
+       <div class="box1 box12"> 
+       <div class="boxcontent">
+         <h2 style="font-size: 16px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Open Secret Kimia Dates 800g</h2>
+         <div class="boximg13"></div>
+         <p style="font-size: 22px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">  ₹ 250      <a href="#" class="on"></a></p>
+         <a href="#" data-name="Open Secret Kimia Dates 800g" data-price="250.00" class="add-to-cart btn btn-primary">Add to cart</a>
+       </div>
+       </div>
+       
+   
+         <div class="box2 box12">
+       <div class="boxcontent">
+         <h2 style="font-size: 16px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Nutraj Walnuts InShell 1 kg (500gm x 2)</h2>
+         <div class="boximg14"></div>
+      
+       <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 560 <a href="#" class="on" ></a></p>
+       <a href="#" data-name="Nutraj Walnuts InShell 1 kg (500gm x 2)" data-price="560.00" class="add-to-cart btn btn-primary">Add to cart</a>
+       </div>
+       
+       </div>
+         
+        
+         <div class="box3 box12">
+           <div class="boxcontent">
+           <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">LILA DRY FRUITS Premium Raw Mota Pista</h2>
+           <div class="boximg15"></div>
+       
+         <p style="font-size: 15px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">₹ 550.00 <a href="https://www.amazon.in/b?node=28503501031&ref_=AZINSOA_BTF&ld=AZINSOA_BTF&pf_rd_r=VCK26DB1X2" class="on"></a></p>
+         <a href="#" data-name="LILA DRY FRUITS Premium Raw Mota Pista" data-price="550.00" class="add-to-cart btn btn-primary">Add to cart</a>
+         </div></div>
+     
+       </div>
+
+
+
+<br>
+
+<div class="shop1">
+  
+<div class="box4 box"> 
+  <div class="boxcontent">
+   <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Naturoz  California Almonds 1 Kg</h2>
+
+  <div class="boximg12"></div>
+
+<p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 699 <a href="" class="on"></a></p>
+<a href="#" data-name="Naturoz California Almonds 1kg" data-price="699.00" class="add-to-cart btn btn-primary">Add to cart</a>
+</div>
+</div>
+
+
+  <div class="box4 box"> 
+    <div class="boxcontent">
+     <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Mirisha Dry Fruits Makhana | Lotus Seeds</h2>
+  
+    <div class="boximg16"></div>
+  
+  <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 170 <a href="" class="on"></a></p>
+  <a href="#" data-name="Mirisha Dry Fruits Makhana | Lotus Seeds" data-price="170.00" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+  </div>
+
+
+    <div class="box4 box"> 
+      <div class="boxcontent">
+       <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Happy Belly Unsalted Roasted Hazelnuts, 1kg</h2>
+    
+      <div class="boximg17"></div>
+    
+    <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 4,589.00  <a href="#" class="on"></a></p>
+    <a href="#" data-name="Happy Belly Unsalted Roasted Hazelnuts, 500g, Pack of 2" data-price="4,589.00" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<hr>
+<br>
+
+
+ <div id="4"></div>
+               <script>
+                   load("footer.html");
+                   function load(url)
+                   {
+                       req = new XMLHttpRequest();
+                       req.open("GET", url, false);
+                       req.send(null);
+                       document.getElementById(4).innerHTML = req.responseText;
+                   }
+               </script>
+      
+  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script  src="./js/script.js"></script>
+     
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

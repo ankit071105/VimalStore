@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Vimal Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Style CSS -->
+  <link rel="stylesheet" href="style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+            .navbar{
+              height: 56px;
+              line-height: 56px;
+              padding: 0 26px;
+          }
+        .row {
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE10 */
+          flex-wrap: wrap;
+          margin: 0 -16px;
+        }
+        
+        .col-25 {
+          -ms-flex: 25%; /* IE10 */
+          flex: 25%;
+        }
+        
+        .col-50 {
+          -ms-flex: 50%; /* IE10 */
+          flex: 50%;
+        }
+        
+        .col-75 {
+          -ms-flex: 75%; /* IE10 */
+          flex: 75%;
+        }
+        
+        .col-25,
+        .col-50,
+        .col-75 {
+          padding: 0 16px;
+        }
+        
+        .container {
+          background-color: #f2f2f2;
+          padding: 5px 20px 15px 20px;
+          border: 1px solid lightgrey;
+          border-radius: 3px;
+        }
+        
+        input[type=text] {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+        
+        label {
+          margin-bottom: 10px;
+          display: block;
+        }
+        
+        .icon-container {
+          margin-bottom: 20px;
+          padding: 7px 0;
+          font-size: 24px;
+        }
+        
+        .btn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px;
+          margin: 10px 0;
+          border: none;
+          width: 100%;
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 17px;
+        }
+        
+        .btn:hover {
+          background-color: #45a049;
+        }
+        
+        span.price {
+          float: right;
+          color: rgb(3, 2, 2);
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+        @media (max-width: 800px) {
+          .row {
+            flex-direction: column-reverse;
+          }
+          .col-25 {
+            margin-bottom: 20px;
+          }
+        }
+        
+            </style>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+             integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+             crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <nav>
+        <div class="heading">
+      
+            <h4>Vimal Store</h4>
+        </div>
+        <ul class="nav-links">
+
+            <li><a class="active" href="/index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="/about.html"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="https://www.google.com/maps/place/Vimal+Store/@22.7474276,86.2569916,17z/data=!4m12!1m5!3m4!2zMjLCsDQ0JzUzLjYiTiA4NsKwMTUnMzYuOSJF!8m2!3d22.7482222!4d86.26025!3m5!1s0x39f607f448f0eeab:0x7a5518de30000000!8m2!3d22.7474227!4d86.2595612!16s%2Fg%2F11ny3hyg_h?entry=ttu"><i class="fa-solid fa-map-location-dot"></i></a></li>
+            <li><a href="/contact.html"><i class="fa-solid fa-address-book"></i></a></li>
+          <li><a href="#carrt"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+    
+    </script>
+    <div class="row">
+      <div class="col-75">
+        <div class="container">
+          <form action="/action_page.php">
+    
+            <div class="row">
+              <div class="col-50">
+                <h3>Billing Address</h3>
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Harshit Sharma">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text" id="email" name="email" placeholder="harshit@example.com">
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                <input type="text" id="adr" name="address" placeholder="Near Garmina bank">
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input type="text" id="city" name="city" placeholder="Jamshedpur">
+    
+                <div class="row">
+                  <div class="col-50">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="Jharkhand">
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">Pincode</label>
+                    <input type="text" id="zip" name="zip" placeholder="831015">
+                  </div>
+                </div>
+              </div>
+    
+              <!-- <div class="col-50">
+                <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa-brands fa-cc-visa" style="color:navy;"></i>
+                  <i class="fa-brands fa-cc-amex"style="color:blue;"></i>
+                  <i class="fa-brands fa-cc-mastercard" style="color:red;"></i>
+                  <i class="fa-brands fa-cc-discover" style="color:orange;"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                <label for="ccnum">Credit card number</label>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                <label for="expmonth">Exp Month</label>
+                <input type="text" id="expmonth" name="expmonth" placeholder="September">
+    
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input type="text" id="expyear" name="expyear" placeholder="2024">
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="009">
+                  </div>
+                </div>
+              </div> -->
+    
+            </div>
+            <h3>Payment</h3>
+            <label class="my">
+              <input type="checkbox" checked="checked" name="sameadr"> Cash on Delivery
+              <i class="fa-solid fa-money-bill"></i>
+            </label>
+            <br>
+            <br>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+            </label>
+           <button style="color: rgb(250, 243, 243); background-color: rgb(4, 87, 170); border-radius: 20%;
+           width: 180px; height: 30px; align-items: center;justify-content: center; text-align: center;margin-top: 30px; margin-bottom: 50px;"><a href="#" style="color: aliceblue;">Continue to Checkout</a></button>
+          </form>
+        </div>
+      </div>
+  
+    </div>
+   <hr>
+    <main style="background-color: rgb(12, 12, 14); color: rgb(0, 0, 0);">
+      <!-- Start DEMO HTML (Use the following code into your project)-->
+ <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded" style="background-color: black;">
+     <div class="row">
+         <div class="col" >
+           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart" style="color: aliceblue; background-color: rgb(56, 120, 238);text-align: center; justify-content: baseline; display: flex; margin-top: 40px;">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger"  style="color: aliceblue; background-color: rgb(56, 120, 238);text-align: center; justify-content: baseline; display: flex;">Clear Cart</button></div>
+     </div>
+ </nav>
+ 
+ <br>
+ <!-- Main -->
+ <div class="container">
+     <div class="row">
+ 
+     </div>
+ </div>
+ 
+   
+  <!-- Modal -->
+ <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <table class="show-cart table">
+           
+         </table>
+         <div>Total price: ₹<span class="total-cart"></span></div>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary"><a href="https://wa.me/9031765770" style="color: aliceblue;">Order now</a></button>
+      
+       </div>
+     </div>
+   </div>
+ </div>
+      <!-- END EDMO HTML (Happy Coding!)-->
+  </main>
+ 
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script  src="js/script.js"></script>
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url)
+        {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+    
+  </body>
+  
+</html>

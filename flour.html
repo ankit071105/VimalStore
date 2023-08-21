@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Vimal Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+
+  
+      <style>
+        body{
+          background-color: black;
+        }
+         nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    min-height: 8vh;
+    background: linear-gradient(to right, #2a2e2e 33%, #665e5e 80% , rgb(178, 177, 182) 100%);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    color: aliceblue;
+}
+
+.nav-links li{
+    list-style: none;
+}
+   .shop{
+    display: flex;
+    justify-content: space-between;
+/* background-color: #0a0b0b; */
+background-size: cover;
+overflow:-moz-hidden-unscrollable;
+position: relative;
+}
+.box{
+border: 1px solid rgb(38, 36, 36);
+ height: 280px;
+ width: 110px;
+ color: rgb(238, 234, 234);
+padding: 20px 0px 15px;
+ background-color: #165eb0;
+margin-left: -10px;
+}
+.box11{
+border: 1px solid rgb(38, 36, 36);
+ height: 350px;
+ width: 200px;
+ color: rgb(238, 234, 234);
+padding: 20px 0px 15px;
+ background-color: #235590;
+border-radius: 10%;
+}
+.box12{
+border: 1px solid rgb(38, 36, 36);
+ height: 300px;
+ width: 120px;
+ color: rgb(238, 234, 234);
+padding: 20px 0px 15px;
+ background-color: #235590;
+
+}
+.boxcontent1{
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+.boxcontent{
+    margin-left: 10px;
+    margin-right:10px;
+}
+.on{
+    color: rgb(232, 225, 225);
+}
+.on:hover{
+    color: rgb(0, 0, 0);
+}
+    .boximg9{
+    width: 60px;
+    height: 60px;
+    float: left;
+   
+    background-image: url("https://images-na.ssl-images-amazon.com/images/I/91xi24Q3duL._SL1500_.jpg");
+    background-size: cover;
+
+}
+.boximg10{
+  width: 60px;
+    height: 60px;
+    background-position: center;
+    background-image: url("https://mybestguide.com/wp-content/uploads/2021/05/Atta-Brands-in-India-Samrat-flour.jpg");
+    background-size: cover;
+}
+.boximg11{
+  width: 60px;
+    height: 60px;
+    background-position: center;
+background-image:url("https://5.imimg.com/data5/JG/KS/MY-2321640/mill-wheat-flour-500x500.jpg") ;
+    background-size: cover;
+}
+.boximg12{
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-image: url("https://5.imimg.com/data5/SELLER/Default/2022/1/EN/NC/HN/142173535/rising-sun-brand-atta-25kg-500x500.jpg");
+    background-size: cover;
+}
+.boximg13{
+    width: 100px;
+    height: 90px;
+    background-position: center;
+    background-image: url("https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2021/04/Nature-Fresh-Sampoorna-Atta-5-kg.png");
+    background-size: cover;
+}
+.boximg14{
+    width: 100px;
+    height: 80px;
+    background-position: center;
+    background-image: url("https://i0.wp.com/img.paisawapas.com/ovz3vew9pw/2023/03/07144940/best-atta-brands-in-india.jpg?resize=348%2C348&ssl=1");
+    background-size: cover;
+}
+.boximg15{
+    width: 100px;
+    height: 90px;
+    background-image: url("https://www.jiomart.com/images/product/original/491551426/good-life-whole-wheat-chakki-atta-1-kg-product-images-o491551426-p491551426-0-202209221440.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg16{
+  width: 60px;
+    height: 60px;
+    background-image: url("");
+    background-size: cover;
+}
+.boximg17{
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-image: url("");
+    background-size: cover;
+}
+.boximg18{
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-image: url("");
+    background-size: cover;
+}
+.boximg19{
+    width: 180px;
+    height: 160px;
+    background-position: center;
+    background-image: url("https://www.jiomart.com/images/product/original/491417435/fortune-chakki-fresh-atta-5-kg-product-images-o491417435-p491417435-0-202205181222.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg20{
+    width: 180px;
+    height: 160px;
+    background-position: center;
+    background-image: url("https://www.jiomart.com/images/product/original/490000038/aashirvaad-whole-wheat-atta-5-kg-product-images-o490000038-p490000038-0-202207051324.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}    
+      
+      </style>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="heading">
+    
+          <h4>Vimal Store</h4>
+      </div>
+      <ul class="nav-links">
+
+          <li><a class="active" href="/index.html"><i class="fa-solid fa-house"></i></a></li>
+          <li><a href="/about.html"><i class="fa-solid fa-user"></i></a></li>
+          <li><a href="https://www.google.com/maps/place/Vimal+Store/@22.7474276,86.2569916,17z/data=!4m12!1m5!3m4!2zMjLCsDQ0JzUzLjYiTiA4NsKwMTUnMzYuOSJF!8m2!3d22.7482222!4d86.26025!3m5!1s0x39f607f448f0eeab:0x7a5518de30000000!8m2!3d22.7474227!4d86.2595612!16s%2Fg%2F11ny3hyg_h?entry=ttu"><i class="fa-solid fa-map-location-dot"></i></a></li>
+          <li><a href="/contact.html"><i class="fa-solid fa-address-book"></i></a></li>
+        <li><a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+  </nav>
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+     
+<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+    </div>
+</nav>
+<h1 style="color: rgb(5, 4, 4); margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif;">Fresh Aata & Flours Upto 30%</h1>
+<div class="shop1">
+    
+  <div class="box1 box"> 
+  <div class="boxcontent">
+    <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Shakti Bhog Aata</h2>
+    <div class="boximg9"></div>
+
+    <p style="font-size: 16px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;"><span style="font-weight: 900; font-size: 20px; color: aliceblue; font-family: 'Times New Roman', Times, serif;">10kg  </span> ₹310 <a href="#" class="on"></a></p>
+    <a href="#" data-name="Shakti Bhog" data-price="310.00" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+  </div>
+  
+
+    <div class="box2 box">
+  <div class="boxcontent">
+    <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center; margin-bottom: 5px;">Samarat Chakki Aata</h2>
+    <div class="boximg10"></div>
+ 
+  <p style="font-size: 16px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center; margin-bottom: 5px;"> 10Kg  ₹290   <a href="#" class="on" ></a></p>
+  <a href="#" data-name="Samarat Chakki Aata" data-price="290.00" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+  </div>
+    
+   
+    <div class="box3 box">
+      <div class="boxcontent">
+      <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Sheetal Bhog Aata</h2>
+      <div class="boximg11"></div>
+  
+    <p style="font-size: 16px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center; margin-bottom: 8px;"> 25Kg    ₹810    <a href="#" class="on"></a></p>
+    <a href="#" data-name="Sheetal Bhog Aata" data-price="810.00" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div></div>
+    <div class="box4 box"> 
+      <div class="boxcontent">
+       <h2 style="font-size: 15px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Shyam Chakki Fresh aata</h2>
+    
+      <div class="boximg12"></div>
+   
+    <p style="font-size: 16px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center; margin-bottom: 5px;">25kg    ₹780 <a href="" class="on"></a></p>
+  
+    <a href="#" data-name="Shyam Chakki Fresh" data-price="780.00" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+    </div>
+  </div>
+
+  <h1 style="color: rgb(4, 4, 4); margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif; text-align: center;"> Perminum Brands </h1>
+  <div class="shop1">
+      
+    <div class="box1 box11"> 
+    <div class="boxcontent1">
+      <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Aashirvaad Whole Wheat Atta 5 kg</h2>
+      <div class="boximg20"></div>
+      <p style="font-size: 15px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 219.00  <a href="#" class="on"></a></p>
+      <a href="#" data-name="Aashirvaad Whole Wheat Atta 5 kg" data-price="219.00" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+    </div>
+    
+
+      <div class="box2 box11">
+    <div class="boxcontent">
+      <h2 style="font-size: 15px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Fortune Chakki Fresh Atta 5 kg</h2>
+      <div class="boximg19"></div>
+   
+    <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">    ₹ 205.00   <a href="#" class="on"></a></p>
+    <a href="#" data-name="Fortune Chakki Fresh aata" data-price="205.00" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+    </div>
+      
+     
+      
+    
+    </div>  
+
+    <h1 style="color: rgb(4, 4, 4); margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif; text-align: center;">New Brands Of
+       Flour</h1>
+    <div class="shop1">
+      <div class="box1 box12"> 
+      <div class="boxcontent">
+     
+          
+            <h2 style="font-size: 16px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Nature Fresh Chakki aata</h2>
+        
+            <div class="boximg13"></div>
+            <p style="font-size: 20px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">10kg  ₹330      <a href="#" class="on"></a></p>
+            <a href="#" data-name="Nature Fresh aata" data-price="330" class="add-to-cart btn btn-primary">Add to cart</a>
+       
+       
+       
+      </div>
+      </div>
+      
+  
+        <div class="box2 box12">
+      <div class="boxcontent">
+        <h2 style="font-size: 16px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Annupurna Farm Fresh Aata</h2>
+        <div class="boximg14"></div>
+     
+      <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">10kg ₹ 300 <a href="#" class="on" ></a></p>
+      <a href="#" data-name="Annupurna Farm Fresh Aata" data-price="300" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+      </div>
+        
+       
+        <div class="box3 box12">
+          <div class="boxcontent">
+          <h2 style="font-size: 15px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Good Life Fresh Aata</h2>
+          <div class="boximg15"></div>
+      
+        <p style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">10kg ₹ 350.00 <a href="https://www.amazon.in/b?node=28503501031&ref_=AZINSOA_BTF&ld=AZINSOA_BTF&pf_rd_r=VCK26DB1X2" class="on"></a></p>
+        <a href="#" data-name="Good Life Fresh Aata" data-price="350" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div></div>
+    
+      </div>
+
+<!-- Main -->
+<div class="container">
+    <div class="row">
+   
+    </div>
+</div>
+
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: ₹<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href="/cart.html">Go To Cart</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+ <div id="4"></div>
+               <script>
+                   load("footer.html");
+                   function load(url)
+                   {
+                       req = new XMLHttpRequest();
+                       req.open("GET", url, false);
+                       req.send(null);
+                       document.getElementById(4).innerHTML = req.responseText;
+                   }
+               </script>
+      
+  
+   
+    <script  src="./js/script.js"></script>
+     
+  </body>
+</html>

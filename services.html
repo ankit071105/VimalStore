@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Vimal Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  
+      <style>
+         nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    min-height: 8vh;
+    background: linear-gradient(to right, #2a2e2e 33%, #665e5e 80% , rgb(178, 177, 182) 100%);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    color: aliceblue;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+    .shop1{
+    display: flex;
+    justify-content: space-between;
+/* background-color: #0a0b0b; */
+background-size: cover;
+overflow:-moz-hidden-unscrollable;
+position: relative;
+}
+.box{
+border: 1px solid rgb(38, 36, 36);
+ height: 250px;
+ width: 130px;
+ color: rgb(238, 234, 234);
+padding: 20px 0px 15px;
+ background-color: #114683;
+ background-position: center;
+
+}
+
+
+.boxcontent{
+    margin-left: 10px;
+    margin-right:10px;
+}
+.on{
+    color: rgb(232, 225, 225);
+}
+.on:hover{
+    color: rgb(0, 0, 0);
+}
+    .boximg9{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/I/51SW5iGfKpL._AC_UL330_SR330,330_.jpg");
+    background-size: cover;
+}
+.boximg10{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://m.media-amazon.com/images/I/71NXgMj7xvL.jpg");
+    background-size: cover;
+}
+.boximg11{
+    width: 50px;
+    height: 50px;
+background-image:url("https://www.bigbasket.com/media/uploads/p/l/147492_7-saffola-gold-refined-cooking-oil-blended-rice-bran-sunflower-oil-helps-keeps-heart-healthy.jpg") ;
+    background-size: cover;
+}
+.boximg12{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyIKC6szMgSe0Dvmx-EqXyWws0rHywmqdXMvTfZx5csl2DXw4tzKD-jMvnyy8oZohIK7w&usqp=CAU");
+    background-size: cover;
+}
+.boximg13{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.jiomart.com/images/product/original/490000525/fortune-premium-kachi-ghani-pure-mustard-oil-1-l-product-images-o490000525-p490000525-0-202303181434.jpg?im=Resize=(360,360)");
+    background-size: cover;
+}
+.boximg14{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.jiomart.com/images/product/original/490012733/dhara-kachi-ghani-mustard-oil-1-l-pouch-product-images-o490012733-p490012733-0-202208221752.jpg?im=Resize=(360,360)");
+    background-size: cover;
+}
+.boximg15{
+    width: 50px;
+    height: 50px;
+    background-image: url("data:image/jpeg;base64,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");
+    background-size: cover;
+}
+.boximg16{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.jiomart.com/images/product/original/490008022/engine-brand-kachi-ghani-mustard-oil-1-l-pouch-product-images-o490008022-p490008022-0-202208221747.jpg?im=Resize=(420,420)");
+    background-size: cover;
+}
+.boximg17{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.jiomart.com/images/product/original/491504124/super-sarvottam-physically-refined-rice-bran-oil-1-l-product-images-o491504124-p491504124-0-202307061545.jpg?im=Resize=(360,360)");
+    background-size: cover;
+}
+.boximg18{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.jiomart.com/images/product/original/490577658/sundrop-superlite-advanced-refined-sunflower-oil-1-l-pouch-product-images-o490577658-p490577658-0-202203151608.jpg?im=Resize=(360,360)");
+    background-size: cover;
+}
+.boximg19{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.jiomart.com/images/product/original/490012729/dhara-nourish-refined-sunflower-oil-1-l-product-images-o490012729-p490012729-0-202204281543.jpg?im=Resize=(360,360)");
+    background-size: cover;
+}
+.boximg20{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://www.jiomart.com/images/product/original/490005534/fortune-refined-soyabean-oil-1-l-product-images-o490005534-p490005534-0-202203151702.jpg?im=Resize=(360,360)");
+    background-size: cover;
+}
+.boximg27{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://rukminim2.flixcart.com/image/850/1000/kybvo280/edible-oil/n/c/a/-original-imagahyv8ap4sfaa.jpeg?q=90");
+    background-size: cover;
+}
+  </style>
+      
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="heading">
+    
+          <h4>Vimal Store</h4>
+      </div>
+      <ul class="nav-links">
+
+          <li><a class="active" href="/index.html"><i class="fa-solid fa-house"></i></a></li>
+          <li><a href="/about.html"><i class="fa-solid fa-user"></i></a></li>
+          <li><a href="https://www.google.com/maps/place/Vimal+Store/@22.7474276,86.2569916,17z/data=!4m12!1m5!3m4!2zMjLCsDQ0JzUzLjYiTiA4NsKwMTUnMzYuOSJF!8m2!3d22.7482222!4d86.26025!3m5!1s0x39f607f448f0eeab:0x7a5518de30000000!8m2!3d22.7474227!4d86.2595612!16s%2Fg%2F11ny3hyg_h?entry=ttu"><i class="fa-solid fa-map-location-dot"></i></a></li>
+          <li><a href="/contact.html"><i class="fa-solid fa-address-book"></i></a></li>
+        <li><a href="/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+  </nav>
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+    </div>
+</nav>
+
+
+<!-- Main -->
+<div class="container">
+    <div class="row">
+   
+    </div>
+</div>
+
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: ₹<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><a href="/cart.html">Go To Cart</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+
+<hr>
+ <h1 style="color: whitesmoke; margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif;">Cooking Oil Up to 50% off</h1>
+  <div class="shop1">
+      
+    <div class="box1 box"> 
+    <div class="boxcontent">
+      <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Fortune Oil</h2>
+      <div class="boximg9"></div>
+      <p style="font-size: 18px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 170   <a href="#" class="on"></a></p>
+      <a href="#" data-name="Fortune Mustard Oil" data-price="170.00" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+    </div>
+    
+
+      <div class="box2 box">
+    <div class="boxcontent">
+      <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Hathi Oil</h2>
+      <div class="boximg10"></div>
+   
+    <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 140 <a href="#" class="on" ></a></p>
+    <a href="#" data-name="Hathi Mustard Oil" data-price="140.00" class="add-to-cart btn btn-primary">Add to cart</a>
+    </div>
+    </div>
+      
+    
+      <div class="box4 box"> 
+        <div class="boxcontent">
+         <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Nature Fresh</h2>
+      
+        <div class="boximg12"></div>
+     
+      <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 185 <a href="" class="on"></a></p>
+      <a href="#" data-name="Nature Fresh 1l" data-price="185.00" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+      </div>
+    </div>
+
+    <h1 style="color: rgb(214, 253, 253); margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif; text-align: center;"> Refined Oil </h1>
+    <div class="shop1">
+        
+      <div class="box1 box"> 
+      <div class="boxcontent">
+        <h2 style="font-size: 17px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Fortune Soyabean</h2>
+        <div class="boximg20"></div>
+        <p style="font-size: 18px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 113  <a href="#" class="on"></a></p>
+        <a href="#" data-name="Fortune Soyabean Oil" data-price="113.00" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+      </div>
+      
+  
+        <div class="box2 box">
+      <div class="boxcontent">
+        <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Dhara Sunflower</h2>
+        <div class="boximg19"></div>
+     
+      <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 123  <a href="#" class="on"></a></p>
+      <a href="#" data-name="Dhara Sunflower" data-price="123.00" class="add-to-cart btn btn-primary">Add to cart</a>
+      </div>
+      </div>
+        
+       
+        <div class="box3 box">
+          <div class="boxcontent">
+          <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Sundrop Advance </h2>
+          <div class="boximg18"></div>
+      
+        <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 245         <a href="#" class="on"></a></p>
+        <a href="#" data-name="Sundrop Advance" data-price="245.00" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div></div>
+     
+      </div>  
+
+      <h1 style="color: whitesmoke; margin-bottom: 20px; margin-top: 30px; font-family: 'Times New Roman', Times, serif; text-align: center;">Mustard (Sarso) Oil</h1>
+      <div class="shop1">
+          
+        <div class="box1 box"> 
+        <div class="boxcontent">
+          <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Fortune Mustard Oil</h2>
+          <div class="boximg13"></div>
+          <p style="font-size: 15px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 150 <a href="#" class="on"></a></p>
+          <a href="#" data-name="Fortune Mustard Oil" data-price="150.00" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
+        </div>
+        
+    
+          <div class="box2 box">
+        <div class="boxcontent">
+          <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Dhara Kachi Ghani</h2>
+          <div class="boximg14"></div>
+       
+        <p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 150 <a href="#" class="on" ></a></p>
+        <a href="#" data-name="Dhara Kachi Ghani Mustard" data-price="150.00" class="add-to-cart btn btn-primary">Add to cart</a>
+        </div>
+        </div>
+          
+         
+          <div class="box3 box">
+            <div class="boxcontent">
+            <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Saloni Mustard Oil</h2>
+            <div class="boximg15"></div>
+        
+          <p style="font-size: 14px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">₹ 130 <a href="" class="on"></a></p>
+          <a href="#" data-name="Saloni Mustard Oil" data-price="130.00" class="add-to-cart btn btn-primary">Add to cart</a>
+          </div></div>
+      
+        </div>
+<br>
+<h2 style="color: aliceblue; text-align: center;">Cooking Oil</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="shop">
+<div class="box4 box"> 
+  <div class="boxcontent">
+   <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Engine Mustard Oil</h2>
+
+  <div class="boximg16"></div>
+
+<p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 163   <a href="" class="on"></a></p>
+<a href="#" data-name="Engine Mustard Oil" data-price="163.00" class="add-to-cart btn btn-primary">Add to cart</a>
+</div>
+</div>
+<div class="box4 box"> 
+  <div class="boxcontent">
+   <h2 style="font-size: 19px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Super Sarvottam</h2>
+
+  <div class="boximg17"></div>
+
+<p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 105 <a href="" class="on"></a></p>
+<a href="#" data-name="Super Sarvottam" data-price="105.00" class="add-to-cart btn btn-primary">Add to cart</a>
+</div>
+</div>
+<div class="box4 box"> 
+  <div class="boxcontent">
+   <h2 style="font-size: 19px; font-weight: bold; margin-bottom: 10px; padding: auto; align-items: center;">Mahakosh Oil</h2>
+
+  <div class="boximg27"></div>
+
+<p style="font-size: 17px; font-weight: bold; margin-top: 10px; padding: auto; align-items: center;">₹ 113 <a href="" class="on"></a></p>
+<a href="#" data-name="Mahakosh Oil" data-price="113.00" class="add-to-cart btn btn-primary">Add to cart</a>
+
+</div>
+</div>
+</div>
+<hr>
+
+
+
+
+
+
+
+
+ <div id="4"></div>
+               <script>
+                   load("footer.html");
+                   function load(url)
+                   {
+                       req = new XMLHttpRequest();
+                       req.open("GET", url, false);
+                       req.send(null);
+                       document.getElementById(4).innerHTML = req.responseText;
+                   }
+               </script>
+      
+  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script  src="./js/script.js"></script>
+     
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
